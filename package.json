@@ -1,12 +1,20 @@
 {
   "name": "getent",
-  "version": "0.1.2",
+  "version": "0.2.0-local",
   "description": "Get entries from administrative databases for Node.js",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "install": "node-gyp rebuild"
+    "install": "node-pre-gyp install --fallback-to-build"
   },
+  "binary": {
+    "module_name": "getent",
+    "module_path": "./build/",
+    "host": "https://192.168.7.153:8181/"
+  },
+  "bundledDependencies": [
+    "node-pre-gyp"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/sendanor/node-getent.git"
@@ -16,10 +24,11 @@
     "passwd",
     "getent",
     "getpwent",
-	"setpwent",
-	"endpwent"
+    "setpwent",
+    "endpwent"
   ],
-  "dependencies":{
+  "dependencies": {
+    "nan": "^2.4.0",
     "node-gyp": "*"
   },
   "author": "Jaakko-Heikki Heusala <jheusala@iki.fi>",
