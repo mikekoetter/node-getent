@@ -1,6 +1,6 @@
 {
   "name": "getent",
-  "version": "0.2.0-local",
+  "version": "0.2.0",
   "description": "Get entries from administrative databases for Node.js",
   "main": "index.js",
   "scripts": {
@@ -9,8 +9,8 @@
   },
   "binary": {
     "module_name": "getent",
-    "module_path": "./build/",
-    "host": "https://192.168.7.153:8181/"
+    "module_path": "./lib/",
+    "host":"https://opendrivesnpm.s3.amazonaws.com"
   },
   "bundledDependencies": [
     "node-pre-gyp"
